@@ -4,6 +4,7 @@ import { getRandomChar, getSymbol } from './utils';
 import { toast } from "react-hot-toast";
 import AnimatedWord from './components/AnimatedWord';
 import DarkMode from './components/DarkMode';
+import copyIcon from './assets/copy3.svg'
 import './index.css'
 
 const App = () => {
@@ -80,8 +81,8 @@ const App = () => {
     return (
         <section>
             <form id='pg-form' onSubmit={handleOnSubmit}>
-                <h2 className='h2-gradient'>Password <AnimatedWord /></h2>
                 <div className='container'>
+                    <div className='h2-gradient'><h2>Password</h2> <AnimatedWord /></div>
                     <div className='result'>
                         <input type='text'
                             disabled
@@ -92,7 +93,7 @@ const App = () => {
                             style={textStyle}
                         />
                         <div className='clipboard' onClick={handleClipboard}>
-                            <img src='/src/assets/icons/copy2.svg' id='clipboard' />
+                            <img src={copyIcon} alt='copy' id='clipboard' />
                         </div>
 
                     </div>

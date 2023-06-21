@@ -18,7 +18,6 @@
             hsl(268deg 34% 78%) 26%,
             hsl(212deg 66% 75%) 100%);
     --label-color: #333333;
-
 }
 
 
@@ -47,12 +46,12 @@ section {
 
 .container {
     margin: 30px auto;
-    padding: 60px;
+    padding: 20px 40px 60px 40px;
     border: var(--container-border);
     border-radius: 10px;
     width: 100%;
     max-width: 500px;
-    min-width: 375px;
+    min-width: 360px;
     -webkit-box-shadow: 0px 39px 51px -24px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px 39px 51px -24px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 39px 51px -24px rgba(0, 0, 0, 0.2);
@@ -64,28 +63,25 @@ section {
 
 
 .h2-gradient {
+    font-size: 30px;
+    padding-bottom: 30px;
     text-align: center;
+    user-select: none;
     background: var(--h2-gradient);
-    background-size: 100%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
-    background-size: 400% !important;
+    background-size: 800% !important;
     -webkit-animation: Gradient 15s ease-in-out infinite !important;
     -moz-animation: Gradient 15s ease-in-out infinite !important;
     animation: Gradient 15s ease-in-out infinite !important;
 }
 
-h2 {
-    font-size: 45px;
-    user-select: none;
-    color: var(--h2-color)
-}
+
 
 #generator {
-    display: inline;
     -webkit-animation: replaceLetters 5s linear;
     -moz-animation: replaceLetters 5s linear;
     animation: replaceLetters 5s linear;
@@ -98,7 +94,7 @@ form {
 
 .result {
     display: flex;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     color: black;
 }
 
@@ -120,6 +116,7 @@ form {
     margin-left: auto;
     margin-right: auto;
     width: 70%;
+    user-select: none;
 }
 
 #clipboard:active {
@@ -127,9 +124,9 @@ form {
     animation: jello-horizontal 0.3s both;
 }
 
-input[type=text] {
+#result {
     font-family: 'Roboto Mono', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
     width: 100%;
     border: none;
@@ -144,6 +141,7 @@ input[type=text] {
 
 input[type="text"]::placeholder {
     font-size: 16px;
+    user-select: none;
 }
 
 .field {
@@ -156,6 +154,7 @@ input[type="text"]::placeholder {
 .field label {
     font-family: 'Roboto Mono', sans-serif;
     font-size: 20px;
+    font-weight: 600;
     margin-left: 20px;
     color: var(--label-color);
     user-select: none;
@@ -202,8 +201,8 @@ input[type="text"]::placeholder {
     padding: 10px;
     cursor: pointer;
     box-shadow: 0px 3px 4px rgba(60, 60, 60, 0.187);
+    user-select: none;
 }
-
 
 #generate-button:active,
 .clipboard:active {
@@ -214,6 +213,34 @@ input[type="text"]::placeholder {
 }
 
 
+@media screen and (max-width: 420px) {
+    .container {
+        padding: 20px 30px 40px 30px;
+        border-radius: 25px;
+    }
+
+    input[type="text"]::placeholder {
+        font-size: 13px;
+    }
+
+    .field label {
+        font-size: 15px;
+    }
+
+    .h2-gradient {
+        font-size: 24px;
+    }
+
+    .result .clipboard {
+        height: 50px;
+        padding: 3px;
+    }
+
+    #result {
+        font-size: 18px;
+    }
+
+}
 
 @-webkit-keyframes jello-horizontal {
     0% {

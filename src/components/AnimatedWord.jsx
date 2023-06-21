@@ -6,10 +6,10 @@ const AnimatedWord = () => {
     const [animationInProgress, setAnimationInProgress] = useState(true);
 
     useEffect(() => {
-        const symbols = '*!@#%^&+';
+        const symbols = '*!1#i|$%&^l+';
         const targetWord = 'Generator';
-        const delay = 100; 
-        const animationDuration = 2000; 
+        const delay = 100;
+        const animationDuration = 2000;
         const steps = Math.ceil(animationDuration / delay);
         const stepSize = Math.ceil(targetWord.length / steps);
         let currentStep = 0;
@@ -35,7 +35,7 @@ const AnimatedWord = () => {
         return () => {
             clearInterval(interval);
         };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return <h2 id='generator'>{animationInProgress ? word : 'Generator'}</h2>;
