@@ -92,7 +92,7 @@ const App = () => {
                             style={textStyle}
                         />
                         <div className='clipboard' onClick={handleClipboard}>
-                            <img src='icons\copy2.svg' id='clipboard' />
+                            <img src='assets/icons\copy2.svg' id='clipboard' />
                         </div>
 
                     </div>
