@@ -92,7 +92,7 @@ const App = () => {
                             style={textStyle}
                         />
                         <div className='clipboard' onClick={handleClipboard}>
-                            <img src='src\icons\copy2.svg' id='clipboard' />
+                            <img src='icons\copy2.svg' id='clipboard' />
                         </div>
 
                     </div>
@@ -127,7 +127,7 @@ const App = () => {
                         <button type="submit" id='generate-button' onClick={() => setIsCopied(false)}>Generate Password</button>
                     </div>
                 </div>
-            <DarkMode />
+                <DarkMode />
             </form>
         </section>
     );
