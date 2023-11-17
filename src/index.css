@@ -66,13 +66,14 @@ section {
     font-size: 30px;
     padding-bottom: 30px;
     text-align: center;
+    -webkit-user-select: none;
     user-select: none;
     background: var(--h2-gradient);
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
+    background-clip: text;
     background-size: 800% !important;
     -webkit-animation: Gradient 15s ease-in-out infinite !important;
     -moz-animation: Gradient 15s ease-in-out infinite !important;
@@ -107,6 +108,7 @@ form {
     cursor: pointer;
     border-top: 1px solid rgba(255, 255, 255, 0.9);
     box-shadow: 0px 3px 5px rgba(60, 60, 60, 0.2);
+    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -116,6 +118,7 @@ form {
     margin-left: auto;
     margin-right: auto;
     width: 70%;
+    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -141,6 +144,7 @@ form {
 
 input[type="text"]::placeholder {
     font-size: 16px;
+    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -157,6 +161,7 @@ input[type="text"]::placeholder {
     font-weight: 600;
     margin-left: 20px;
     color: var(--label-color);
+    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -201,6 +206,7 @@ input[type="text"]::placeholder {
     padding: 10px;
     cursor: pointer;
     box-shadow: 0px 3px 4px rgba(60, 60, 60, 0.187);
+    -webkit-user-select: none;
     user-select: none;
 }
 
